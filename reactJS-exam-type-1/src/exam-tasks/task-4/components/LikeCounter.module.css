@@ -1,0 +1,21 @@
+.div{
+    display: flex;
+    justify-content: center;
+}
+.button{
+
+    border: none;
+    background-color: white;
+}
+.button i {
+    font-size:30px;
+    color: #969595;
+    cursor: pointer;
+}
+.button i:hover{
+    color: #1a1ab4;
+}
+
+.div h2{
+    color: #595858;
+}
