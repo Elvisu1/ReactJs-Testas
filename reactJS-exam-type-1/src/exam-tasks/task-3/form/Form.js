@@ -19,6 +19,12 @@ function Form(){
     const handleSubmit = (event) => {
         event.preventDefault();
         setSubmitted(true);
+        if(values.age <18){
+            setSubmitted(false)
+            alert("Deja, registracija negalima.\n" +
+                "Registruotis galima tik nuo 18 metų")
+
+        }
     }
     return(
         <form onSubmit={handleSubmit}>
@@ -39,6 +45,8 @@ function Form(){
             {submitted ? <div>
                 Dėkojame, kad užsiregistravote
             </div> : null}
+
+
         </form>
     )
 }
