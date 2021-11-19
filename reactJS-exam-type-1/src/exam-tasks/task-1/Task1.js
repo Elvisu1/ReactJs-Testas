@@ -1,13 +1,42 @@
 import React from 'react';
 import Contacts from "./Pages/Contacts";
 import AboutUs from "./Pages/AboutUs";
+import styled from 'styled-components'
+import {Route, Link} from "react-router-dom";
 
+const Div = styled.div`
+height: 30vh;
+`
+const Nav = styled.nav`
+  width: 60vh;
+  height: 50px;
+  background-color: blue;
+
+`
+const NavLink = styled(Link)`
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+  
+`
 function Task1() {
   return (
-    <div>
+    <Div>
       <h3>Task 1</h3>
+<Nav>
+    <NavLink to='/AboutUs'>About Us</NavLink>
+    <NavLink to='/Contacts'>Contacts</NavLink>
+    <Route path='/AboutUs'>
 
-    </div>
+        <AboutUs/>
+    </Route>
+
+    <Route path='/Contacts'>
+        <Contacts/>
+    </Route>
+</Nav>
+
+    </Div>
   );
 }
 

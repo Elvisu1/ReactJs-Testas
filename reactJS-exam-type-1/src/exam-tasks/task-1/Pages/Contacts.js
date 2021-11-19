@@ -1,9 +1,14 @@
+import styled from "styled-components";
+import {NavLink} from "react-router-dom";
+const Div = styled.div`
+text-align: center;
+`
 function Contacts(){
     return (
-        <div>
+        <Div>
             <h1>Contacts</h1>
-            <button>Grįžti atgal</button>
-        </div>
+            <NavLink to='/'>Grįžti atgal</NavLink>
+        </Div>
 
     )
 }
