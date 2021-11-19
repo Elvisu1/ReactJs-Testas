@@ -16,27 +16,27 @@ function Categories(){
 <div className={css.imgCards}>
     <div >
         <img className={css.img} src={poster}/>
-        <p>POSTERS</p>
+        <p className={css.p}>POSTERS</p>
 
     </div>
     <div >
         <img className={css.img} src={apparel}/>
-        <p>APPAREL</p>
+        <p className={css.p}>APPAREL</p>
 
     </div>
     <div >
         <img className={css.img} src={stickers}/>
-        <p>STICKERS</p>
+        <p className={css.p}>STICKERS</p>
 
     </div>
     <div >
         <img className={css.img} src={cups}/>
-        <p>CUPS</p>
+        <p className={css.p}>CUPS</p>
 
     </div>
     <div >
         <img className={css.img} src={calendars}/>
-        <p>CALENDARS</p>
+        <p className={css.p}>CALENDARS</p>
 
     </div>
 </div>
