@@ -1,9 +1,11 @@
 import React from 'react';
+import Form from "./form/Form";
 
 function Task3() {
   return (
     <div>
       <h3>Task 3</h3>
+        <Form/>
     </div>
   );
 }
@@ -16,10 +18,10 @@ Sukurkite forma, kurioje vartotojas galės nurodyti
 - pavardę
 - amžių
 
-Vartotojui užpildius formą ir paspaudus "Pateikti", po forma 
+Vartotojui užpildius formą ir paspaudus "Pateikti", po forma
 atsiras atsiras pasisveikinimas:
 - Jei asmuo yra 18 m. ir vyresnis: "Dėkojame, kad užsiregistravote"
-- Jei asmuo yra 17 m. ir jaunesnis: "Deja, registracija negalima. 
+- Jei asmuo yra 17 m. ir jaunesnis: "Deja, registracija negalima.
 Registruotis galima tik nuo 18 metų"
 
 Pastaba: panaudokite useState
