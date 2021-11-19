@@ -1,4 +1,5 @@
 import {useState} from "react";
+import css from './Form.module.css'
 
 function Form(){
     const [values, setValues] = useState({
@@ -27,23 +28,23 @@ function Form(){
         }
     }
     return(
-        <form onSubmit={handleSubmit}>
+        <form className={css.form} onSubmit={handleSubmit}>
+<h2> Registration Form</h2>
+            <div>
 
-            <div>
-                <label>Name</label>
-                <input onChange={handleName} value={values.name} type="text" required />
+                <input className={css.input} placeholder='name' onChange={handleName} value={values.name} type="text" required />
             </div>
             <div>
-                <label>Surname</label>
-                <input onChange={handleSurname} value={values.surname} type="text" required />
+
+                <input className={css.input} placeholder='surname' onChange={handleSurname} value={values.surname} type="text" required />
             </div>
             <div>
-                <label>Age</label>
-                <input onChange={handleAge} value={values.age} type="number" required />
+
+                <input className={css.input} placeholder='age' onChange={handleAge} value={values.age} type="number" required />
             </div>
-            <input type="submit" value="Submit"/>
-            {submitted ? <div>
-                Dėkojame, kad užsiregistravote
+            <input className={css.button} type="submit" value="Submit"/>
+            {submitted ? <div className={css.text}>
+                Dėkojame, kad užsiregistravote!
             </div> : null}
 
 

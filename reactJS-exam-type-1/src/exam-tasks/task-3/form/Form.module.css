@@ -1,0 +1,27 @@
+.form{
+    margin: 50px;
+    text-align: center;
+    border: 2px solid black;
+    width: 20%;
+
+}
+.button{
+    margin: 10px;
+    height: 30px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.button:hover{
+
+    transform: scale(1.1);
+}
+.text{
+    font-size: 18px;
+    color: #64c74f;
+}
+.input{
+    box-sizing: border-box;
+
+}
