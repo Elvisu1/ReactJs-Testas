@@ -8,22 +8,26 @@ const Div = styled.div`
 height: 30vh;
 `
 const Nav = styled.nav`
+  padding: 20px ;
   width: 60vh;
-  height: 50px;
+  height: 30px;
   background-color: blue;
+  border: 2px solid black;
 
 `
 const NavLink = styled(Link)`
+  padding: 20px;
   text-decoration: none;
   color: white;
-  padding: 20px;
   
 `
 function Task1() {
   return (
     <Div>
       <h3>Task 1</h3>
+
 <Nav>
+
     <NavLink to='/AboutUs'>About Us</NavLink>
     <NavLink to='/Contacts'>Contacts</NavLink>
     <Route path='/AboutUs'>

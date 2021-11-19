@@ -7,6 +7,7 @@ text-align: center;
 function AboutUs(){
     return (
         <Div>
+            <br/>
             <h1>About US</h1>
             <NavLink to='/'>Grįžti atgal</NavLink>
         </Div>
