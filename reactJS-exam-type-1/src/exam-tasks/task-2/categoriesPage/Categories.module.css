@@ -1,0 +1,25 @@
+.div{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+
+}
+h1{
+    font-family: Trebuchet MS;
+    font-weight: 10;
+
+}
+.img{
+    width: 200px;
+}
+.imgCards {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+
+}
+
