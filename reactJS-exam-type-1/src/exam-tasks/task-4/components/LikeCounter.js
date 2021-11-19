@@ -1,15 +1,43 @@
-import React, {useState} from "react";
+import React, {useReducer, useState} from "react";
 import css from './LikeCounter.module.css'
+// const initLikeValues = {likeValue: 12}
+
+function likeReducer(state, action ) {
+
+
+
+}
 
 function LikeCounter() {
-    const [likeValue, setLikeValue] = useState(0);
+    const [likeValue, setLikeValue] = useState(12);
+    // const [state,dispatch] = useReducer(likeReducer, initLikeValues)
     const handleIncrement = () => {
-        setLikeValue(likeValue + 1)
+        if  (likeValue <= 12) {
+            setLikeValue(likeValue + 1)
+            setDislikeValue(2)
+        } else{
+
+
+        }
+
+
+
+        // dispatch({type:'more'});
+
     }
-    const[dislikeValue, setDislikeValue] = useState(0)
+    const[dislikeValue, setDislikeValue] = useState(2)
     const handleDecrement = () => {
-        setDislikeValue(dislikeValue - 1)
+        if (dislikeValue <=2){
+            setDislikeValue(dislikeValue + 1)
+            setLikeValue(12)
+        }
+
+
+
+        // dispatch({type:'less'})
+
     }
+
     return (
         <div className={css.div}>
             <button onClick={handleIncrement} className={css.button}><i className="fa fa-thumbs-up" aria-hidden="true"></i></button>
