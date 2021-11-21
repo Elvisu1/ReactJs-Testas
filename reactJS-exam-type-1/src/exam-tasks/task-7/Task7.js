@@ -9,6 +9,7 @@ import styled, {ThemeProvider } from "styled-components";
 
 const StyledApp = styled.div`
     color:${(props) => props.theme.fontcolor};
+    
 `
 
 function Task7() {

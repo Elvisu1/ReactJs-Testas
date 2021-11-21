@@ -3,7 +3,7 @@ import {createGlobalStyle} from "styled-components";
 
 export const LightTheme = {
     body: '#ffffff',
-    fontcolor: '#0000'
+    fontcolor: 'black'
 };
 export const DarkTheme = {
     body: '#000000',
@@ -11,8 +11,9 @@ export const DarkTheme = {
 };
 
 export const GlobalStyles = createGlobalStyle`
-div{
+body{
   background-color:${(props) => props.theme.body};
 }
 
 `
+
