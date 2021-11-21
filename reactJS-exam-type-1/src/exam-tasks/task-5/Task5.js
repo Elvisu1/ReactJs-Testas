@@ -1,9 +1,21 @@
 import React from 'react';
+import Logo from './assets/images/logo.png'
+import css from './style.module.css'
 
 function Task5() {
   return (
     <div>
       <h3>Task 5</h3>
+        <div className={css.div}>
+           <img className={css.img} src={Logo}/>
+            <h1 className={css.h1}>Happening now</h1>
+            <h2 className={css.h2}>Join Twitter today.</h2>
+            <div className={css.buttons}>
+                <button >Sign up</button>
+                <button>Log in</button>
+            </div>
+
+        </div>
     </div>
   );
 }

@@ -1,0 +1,23 @@
+.div{
+margin: 20px;
+}
+
+.img{
+    height: 80px;
+}
+.h1{
+    margin-left: 10px;
+    font-family: "Arial Black";
+    font-size: 50px;
+}
+.h2{
+    margin-left: 10px;
+    font-family: "Arial Black";
+}
+.buttons{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 200px
+}
