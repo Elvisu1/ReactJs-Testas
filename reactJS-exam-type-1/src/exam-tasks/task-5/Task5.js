@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from './assets/images/logo.png'
 import css from './style.module.css'
+import Button from "./components/Button";
 
 function Task5() {
   return (
@@ -11,8 +12,20 @@ function Task5() {
             <h1 className={css.h1}>Happening now</h1>
             <h2 className={css.h2}>Join Twitter today.</h2>
             <div className={css.buttons}>
-                <button >Sign up</button>
-                <button>Log in</button>
+                <Button style={{color:"white",
+                    backgroundColor:"#00acee",
+                    cursor:"pointer",
+                    border:"none",marginBottom:"15px",padding:"10px",
+                    borderRadius:"15px", width:"300px"}}
+                        name='Sign up'></Button>
+
+                <Button style={{color:"#00acee",
+                    cursor:"pointer",
+
+                    backgroundColor:"white",
+                    border:"1px solid #00acee",padding:"10px",
+                    borderRadius:"15px", width:"300px"}}
+                        name='Log in'></Button>
             </div>
 
         </div>
