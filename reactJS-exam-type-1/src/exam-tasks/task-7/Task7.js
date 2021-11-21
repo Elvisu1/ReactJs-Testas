@@ -1,9 +1,23 @@
 import React from 'react';
-
+import {useState} from "react";
+const lightTheme = {
+    body: '#f1f1f1',
+    fontcolor: '#0000'
+}
+const darkTheme = {
+    body: '#000000',
+    fontcolor: '#f1f1f1'
+}
 function Task7() {
   return (
     <div>
       <h3>Task 7</h3>
+        <div>
+            <h1>This is my text</h1>
+            <p>How can i change theme ?</p>
+            <button>Light Theme</button>
+            <button>Dark theme</button>
+        </div>
     </div>
   );
 }
