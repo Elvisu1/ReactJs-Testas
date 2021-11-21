@@ -1,23 +1,44 @@
 import React from 'react';
 import {useState} from "react";
-const lightTheme = {
-    body: '#f1f1f1',
-    fontcolor: '#0000'
-}
-const darkTheme = {
-    body: '#000000',
-    fontcolor: '#f1f1f1'
-}
+import {LightTheme, DarkTheme, GlobalStyles} from "./components/themes";
+
+
+
+
+import styled, {ThemeProvider } from "styled-components";
+
+const StyledApp = styled.div`
+    color:${(props) => props.theme.fontcolor};
+`
+
 function Task7() {
+    const [theme, setTheme] = useState("light");
+    const themeTogglerLight = () => {
+        theme === "dark" ? setTheme("light"):setTheme("light");
+    };
+    const themeTogglerDark = () => {
+        theme === "light" ? setTheme("dark"):setTheme("dark");
+
+    };
+
   return (
     <div>
       <h3>Task 7</h3>
-        <div>
-            <h1>This is my text</h1>
-            <p>How can i change theme ?</p>
-            <button>Light Theme</button>
-            <button>Dark theme</button>
-        </div>
+        <ThemeProvider theme ={theme === "light" ? LightTheme : DarkTheme}>
+
+                <GlobalStyles/>
+                <StyledApp>
+                    <h1>This is my text</h1>
+                    <p>How can i change theme ?</p>
+                    <button onClick={() => themeTogglerLight()} >Light Theme</button>
+                    <button onClick={() => themeTogglerDark()}>Dark theme</button>
+                </StyledApp>
+
+
+
+
+        </ThemeProvider>
+
     </div>
   );
 }
