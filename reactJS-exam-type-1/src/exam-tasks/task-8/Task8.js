@@ -1,13 +1,23 @@
-import React from 'react';
+import {useState} from 'react';
 import CompA from './CompA';
 import CompB from './CompB';
 
+
 function Task8() {
+    const [count, setCount] = useState(0)
+    const handleIncrement = () => {
+        setCount(count +1);
+    }
   return (
     <div>
-      <h3>Task 8</h3>
-      {/*<CompA />*/}
-      {/*<CompB />*/}
+      <h3>Task 8 </h3>
+
+<div style={{textAlign:"center", border:"5px solid red", width:"40vh", margin:"20px"}}>
+    <CompA />
+
+    <CompB />
+</div>
+
     </div>
   );
 }
@@ -16,7 +26,7 @@ export default Task8;
 
 /* Task 8
 task-8 aplanke rasite kelis komponetus. Task8 komponente, turi būti atvaizduojami
-šie kompoentai: CompA (viduje turi <h2>CompA</h2> ir CompA1 (su tekstu <h3>CompA1</h3>)) 
+šie kompoentai: CompA (viduje turi <h2>CompA</h2> ir CompA1 (su tekstu <h3>CompA1</h3>))
 ir CompB (viduje turi <h2>CompB</h2>).
 
 Task8 komponentų medis

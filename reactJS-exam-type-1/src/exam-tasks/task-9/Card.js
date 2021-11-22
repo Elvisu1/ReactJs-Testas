@@ -13,6 +13,7 @@ export default class Card extends Component {
   changeStateData = () => {
     this.setState({
       userName: this.state.userName === `Home` ? `Work` : `Home`,
+        yesNo: this.state.yesNo === 'yes' ? 'yes' : 'yes',
     });
   };
   render = () => (
