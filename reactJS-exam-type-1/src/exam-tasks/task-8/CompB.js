@@ -7,7 +7,7 @@ function CompB() {
   return (
     <div>
 
-      <h4>CompB  <button onClick={handleIncrement}>Inc +10</button></h4>
+      <h4>CompB  <button style={{backgroundColor:"blue", color:"white"}} onClick={handleIncrement}>Inc +10</button></h4>
 
     </div>
   );

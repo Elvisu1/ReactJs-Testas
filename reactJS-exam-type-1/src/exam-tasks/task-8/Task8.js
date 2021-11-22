@@ -1,25 +1,31 @@
-import {useState} from 'react';
+import { useState,useContext} from 'react';
 import CompA from './CompA';
 import CompB from './CompB';
 import CounterContextProvider from "./CounterContext";
 
 
+
 function Task8() {
     const [count, setCount] = useState(0)
 
+
+
   return (
-      <CounterContextProvider>
+
           <div>
               <h3>Task 8 </h3>
 
+
               <div style={{textAlign:"center", border:"5px solid red", width:"40vh", margin:"20px"}}>
+                  <CounterContextProvider>
                   <CompA />
 
                   <CompB />
+                  </CounterContextProvider>
               </div>
 
           </div>
-      </CounterContextProvider>
+
 
   );
 }

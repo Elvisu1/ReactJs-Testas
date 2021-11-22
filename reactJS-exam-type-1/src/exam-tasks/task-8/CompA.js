@@ -3,7 +3,7 @@ import CompA1 from './CompA1';
 import {CounterContext} from "./CounterContext";
 
 function CompA() {
-const {count,handleIncrement, handleDecrement} =useContext((CounterContext))
+const {count} =useContext((CounterContext))
   return (
     <div>
       <h4>CompA</h4>
