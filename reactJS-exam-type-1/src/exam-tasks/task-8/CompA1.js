@@ -1,10 +1,9 @@
-import {useState} from 'react';
-
+import {useContext} from 'react';
+import {CounterContext} from "./CounterContext";
 function CompA1({name}) {
-    const [count, setCount] = useState(10);
-    const handleDecrement = () => {
-        setCount(count -10);
-    }
+    const {handleDecrement} =useContext((CounterContext))
+
+
   return (
     <div>
       <h5>CompA1 <button onClick={handleDecrement}>Dec -10 </button></h5>

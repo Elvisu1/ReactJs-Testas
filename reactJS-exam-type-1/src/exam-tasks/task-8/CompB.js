@@ -1,10 +1,9 @@
-import {useState} from 'react';
+import {useContext} from 'react';
+import {CounterContext} from "./CounterContext";
+
 
 function CompB() {
-    const [count, setCount] = useState(10);
-    const handleIncrement = () => {
-        setCount(count +10);
-    }
+    const {handleIncrement} =useContext((CounterContext))
   return (
     <div>
 

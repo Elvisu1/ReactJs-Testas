@@ -1,13 +1,14 @@
-import {useState} from 'react';
+import {useContext} from 'react';
 import CompA1 from './CompA1';
+import {CounterContext} from "./CounterContext";
 
 function CompA() {
-    const [count, setcount] = useState(0)
+const {count,handleIncrement, handleDecrement} =useContext((CounterContext))
   return (
     <div>
       <h4>CompA</h4>
         <h2>{count}</h2>
-      <CompA1 name={count} />
+      <CompA1  />
     </div>
   );
 }

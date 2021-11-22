@@ -1,24 +1,26 @@
 import {useState} from 'react';
 import CompA from './CompA';
 import CompB from './CompB';
+import CounterContextProvider from "./CounterContext";
 
 
 function Task8() {
     const [count, setCount] = useState(0)
-    const handleIncrement = () => {
-        setCount(count +1);
-    }
+
   return (
-    <div>
-      <h3>Task 8 </h3>
+      <CounterContextProvider>
+          <div>
+              <h3>Task 8 </h3>
 
-<div style={{textAlign:"center", border:"5px solid red", width:"40vh", margin:"20px"}}>
-    <CompA />
+              <div style={{textAlign:"center", border:"5px solid red", width:"40vh", margin:"20px"}}>
+                  <CompA />
 
-    <CompB />
-</div>
+                  <CompB />
+              </div>
 
-    </div>
+          </div>
+      </CounterContextProvider>
+
   );
 }
 
