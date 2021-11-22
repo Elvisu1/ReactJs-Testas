@@ -8,6 +8,7 @@ import {LightTheme, DarkTheme, GlobalStyles} from "./components/themes";
 import styled, {ThemeProvider } from "styled-components";
 
 const StyledApp = styled.div`
+    text-align: center;
     color:${(props) => props.theme.fontcolor};
     
 `
@@ -23,11 +24,13 @@ function Task7() {
     };
 
   return (
+
     <div>
       <h3>Task 7</h3>
         <ThemeProvider theme ={theme === "light" ? LightTheme : DarkTheme}>
 
                 <GlobalStyles/>
+
                 <StyledApp>
                     <h1>This is my text</h1>
                     <p>How can i change theme ?</p>

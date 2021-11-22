@@ -11,7 +11,7 @@ export const DarkTheme = {
 };
 
 export const GlobalStyles = createGlobalStyle`
-body{
+div{
   background-color:${(props) => props.theme.body};
 }
 

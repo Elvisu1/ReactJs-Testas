@@ -1,9 +1,12 @@
 import React from 'react';
+import Fetch from "./component/Fetch";
+
 
 function Task6() {
   return (
     <div>
       <h3>Task 6</h3>
+        <Fetch/>
     </div>
   );
 }
