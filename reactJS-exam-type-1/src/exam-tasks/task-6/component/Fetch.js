@@ -3,20 +3,25 @@ import axios from 'axios'
 
 
 function Fetch() {
-    const [users, srtUsers] = useState([])
+    const [posts, setPosts] = useState([])
     useEffect(() => {
       axios.get('https://jsonplaceholder.typicode.com/users')
           .then(res => {
               console.log(res)
+              setPosts(res.data)
           })
           .catch(err => {
               console.log(err)
           })
-    })
+    },[])
     return (
         <div>
             <ul>
-                users.map(user => <li key={user.id}>{user.title}</li>
+                <h1>Contacts</h1>
+                {
+                    posts.map(post => <li key={post.id}>{post.name}  {post.email} {post.address.street} {post.address.city} {post.phone} {post.company.name}</li>)
+                }
+
             </ul>
         </div>
     )
