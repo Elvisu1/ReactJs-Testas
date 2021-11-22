@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import axios from 'axios'
+import css from './Fetch.module.css'
 
 
 function Fetch() {
@@ -16,10 +17,17 @@ function Fetch() {
     },[])
     return (
         <div>
-            <ul>
-                <h1>Contacts</h1>
+            <h1 className={css.h1}>Contacts</h1>
+            <ul className={css.ul}>
+
                 {
-                    posts.map(post => <li key={post.id}>{post.name}  {post.email} {post.address.street} {post.address.city} {post.phone} {post.company.name}</li>)
+                    posts.map(post => <li className={css.li} key={post.id}> <h2>{post.name}</h2>
+
+                        <h5 style={{color:"blue"}}>
+                        <i className="fa fa-phone" aria-hidden="true"></i> {post.phone}</h5>
+                        <i className="fa fa-envelope" aria-hidden="true"></i> {post.email}
+                         <p><i className="fa fa-building" aria-hidden="true"></i> {post.company.name}</p>
+                         <h5><i className="fa fa-map-marker" aria-hidden="true"></i> {post.address.street}  {post.address.city}</h5></li>)
                 }
 
             </ul>
