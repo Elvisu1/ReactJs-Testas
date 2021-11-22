@@ -3,6 +3,7 @@ import axios from 'axios'
 
 
 
+
 function TodoFetch() {
     const [posts, setPosts] = useState([])
     useEffect(() => {
@@ -21,7 +22,7 @@ function TodoFetch() {
 
 
                 {
-                    posts.map(post => <li  key={post.id}> <h2>{post.title}</h2> </li>)
+                    posts.slice(0,5).map(post =>  <h5  key={post.id}> {post.title} {post.completed}</h5>)
 
 
                 }
